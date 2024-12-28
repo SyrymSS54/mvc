@@ -1,0 +1,20 @@
+<p><b>Привет,<?php echo $data['name']?></b></p>
+<p>Кого удалите,кого измените,А?</p>
+<form method="post">
+    <p>
+        <input type="text" list="array" required name="type-var">
+        <datalist id="array">
+            <option>id</option>
+            <option>username</option>
+            <option>email</option>
+            <option>tnumber</option>
+        </datalist>
+        <input type="search" required name="type-text" placeholder="Поиск...">
+        <input type="submit" value="Найти">
+    </p>
+</form>
+<?php
+if(isset($data['table'])){
+    echo $data['table'];
+}
+?>
